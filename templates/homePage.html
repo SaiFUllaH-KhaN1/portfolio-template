@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- font from google (poppins font style regular 400 and semi 600 used here) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- font awesome cdn js for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="/static/style.css">
+
+    <title>Portfolio</title>
+
+
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    
+    <header>
+
+        <a href="#" class="left">John Doe</a> <!-- the / brings back to home page -->
+
+        <i class="fa-solid fa-bars" id="menu-icon"></i>
+
+        <nav class="nav">
+            <a href="#expertise">Expertise</a>
+            <a href="#work">Work</a>
+            <a href="#contact" id="a-contact-button">Contact</a>
+            <button class="contact-button" onclick="window.location.href='#contact'">Contact</button>
+        </nav>
+
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="hero">
+
+            <div class="hero-img">
+                <img src="/images/profile-pic.jpg" alt="image...">
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    <button class="btn" onclick="window.location.href='#contact'">Let's Talk!</button>
+                </div>
+            
+            </div>
+
+            <div class="hero-content">
+                <h1>Hi, I'm <span id="name">John</span></h1>
+                <h3><span>- Profession 1</span></h3>
+                <h3><span>- Profession 2</span></h3> 
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eum amet voluptates natus quis aspernatur molestias, harum magnam recusandae fugit quisquam quas explicabo provident eligendi enim quaerat facere nemo non?
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- EXPERTISE SECTION -->
+        <section id="expertise">
+
+            <div class="expertise-heading"><h2>Expertise</h2></div>
+
+            <div class="expertise-content">
+
+                <div class="expertise-img"><img src="/images/skills.jpeg" alt="image...">
+                </div>
+                <div class="expertise-list">
+                    <ul>                                
+                        <li><i class="fa-solid fa-code"></i> <span>Expertise / Skill 1</span></li>
+                        <li><i class="fa-solid fa-code"></i> <span>Expertise / Skill 2</span></li>
+                        <li><i class="fa-solid fa-code"></i> <span>Expertise / Skill 3</span></li>
+                        <li><i class="fa-solid fa-code"></i> <span>Expertise / Skill 4</span></li>
+                        <li><i class="fa-solid fa-code"></i> <span>Expertise / Skill 5</span></li>
+                        <li><i class="fa-solid fa-code"></i> <span>Expertise / Skill 6</span></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+        
+        <!-- WORK SECTION -->
+        <section id="work">
+
+            <div class="work-heading"><h2>Work</h2></div>
+            
+            <div class="work-content">
+
+                <div class="work-box">
+                    <div class="work-info">
+
+                        <h4>WORK 1</h4>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis iusto assumenda eos nulla sapiente voluptates reprehenderit necessitatibus eveniet quidem. Eligendi exercitationem esse numquam aperiam rem quae velit repudiandae accusantium?</p>
+                    </div>
+                </div>
+
+                <div class="work-box">
+                    <div class="work-info">
+
+                        <h4>WORK 2</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta obcaecati veniam adipisci corporis ipsa voluptate corrupti, facere vitae rerum impedit illum eos voluptatum earum officia exercitationem tempore laborum laudantium ad.</p>
+                    </div>
+                </div>
+
+                <div class="work-box">
+                    <div class="work-info">
+
+                        <h4>WORK 3</h4>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta obcaecati veniam adipisci corporis ipsa voluptate corrupti, facere vitae rerum impedit illum eos voluptatum earum officia exercitationem tempore laborum laudantium ad.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section id="contact">
+
+            <div class="contact-heading"><h2>Contact</h2></div>
+
+            <form action="#">
+                    <input class="input-elements" type="text" placeholder="Full Name">
+                    <input class="input-elements" type="email" placeholder="Email">
+                    <input class="input-elements" type="number" placeholder="Mobile Number">
+                    <textarea class="text-area" type="submit" value="Send Message!" placeholder="Your Message!"></textarea>
+            </form>
+
+
+        </section>
+
+        <!-- FOOTER (NOT A SECTION as 100vh is set for each section view) -->
+        <footer id="footer">
+
+            <div class="footer-social">
+                <a href="#hero" class="">Home</a>
+                <a href="#expertise" class="">Expertise</a>
+                <a href="#work" class="">Work</a>
+                <a href="#contact" class="">Contact</a>
+            </div>
+
+            <p class="footer-copy">&#169;  John Doe | All rights reserved</p>
+
+        </footer>
+
+    </main>
+
+</body>
+
+<script>
+
+let nav = document.querySelector('.nav');
+let menuIcon = document.querySelector('#menu-icon');
+
+menuIcon.onclick = () => {
+    nav.classList.toggle('active');
+    menuIcon.classList.toggle('fa-xmark');
+};
+
+</script>
+
+</html>

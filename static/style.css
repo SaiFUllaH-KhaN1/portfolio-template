@@ -1,0 +1,486 @@
+/* root used for global var defining */
+:root {
+ --text-color: rgb(28, 27, 27);
+ --link-color: rgb(17, 87, 201);
+ --background-color: rgb(231, 231, 231);
+ --happy-color: rgb(226, 212, 23);
+}
+
+/* the * means for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* effects overall html */
+html {
+    scroll-behavior: smooth;
+}
+
+/* effects body only. */
+body {
+    font-family: 'Poppins', sans-serif; /* default font is sans-serif if Poppins not load */
+    background-color: var(--background-color);
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    /*the top,left and width makes position fixed when scrolled  */
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+
+    padding: 0 2rem; /* 0 is y-axis, x-axis is 2rem */
+    height: 4rem; /* height of the nav */
+    align-items: center; /* so that all elements come down acc. to the height set */
+    
+    background: linear-gradient(90deg, rgba(236, 243, 252), rgba(17, 87, 201, 0.95), rgb(236, 243, 252));
+
+    position: fixed;
+    z-index: 1000;
+}
+
+header .left{
+    font-size:x-large;
+    font-weight: 600;
+}
+
+#menu-icon{
+    color: var(--text-color);
+    font-size:x-large;
+    display: none;
+}
+
+#menu-icon:hover{
+    color: var(--link-color);
+}
+
+#menu-icon:hover::after{
+    color: var(--link-color);
+}
+
+header .nav a{
+    color: var(--text-color);
+    font-size:large;
+    font-weight: 600;
+    padding: 0.3rem 0.3rem;
+    margin: 1rem;
+}
+
+header .nav a:hover{
+    border-bottom: 0.3rem solid var(--link-color);
+}
+
+header .nav a:hover::after{
+    border-bottom: 0.3rem solid var(--link-color);
+} 
+
+header .nav .contact-button{
+    color: var(--background-color);
+    background: linear-gradient(90deg, var(--link-color), rgb(80, 128, 205));    
+    font-size:large;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+    margin: 1rem;
+    border-radius: 2rem;
+}
+
+header .nav .contact-button:hover{
+    transform: scale(1.1);
+}
+
+#a-contact-button{
+    display: none;
+}
+
+section{
+    min-height: 100vh; /* so section covers entire page vertical height*/
+    padding: 3.5rem 1.5rem; /* y and x-axis, respectively */
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.hero-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content #name{
+    font-size: 5rem;
+    color: var(--link-color);
+}
+
+.hero-content h1{
+    font-size: 2rem;
+}
+
+.hero-content h3{
+    font-size: 2.5rem;
+}
+
+.hero-content p{
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.hero-img img{
+    width: 28vw; /*32% of viewport width reponsive!*/
+    border-radius: 50rem;
+    box-shadow: 0 0 3rem var(--link-color);
+}
+
+.hero-img img:hover{
+    box-shadow: 0 0 4rem var(--happy-color);
+}
+
+.hero-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.social-icons{
+    display:flex;
+}
+
+.social-icons a{
+
+    font-size: 1.5rem;
+    margin: 1rem;
+    border-radius: 25%;
+}
+
+.social-icons a:hover{
+    background-color: var(--background-color);
+    transform: scale(1.2)translateY(-0.2rem);
+    box-shadow: 0 0 2rem var(--link-color);
+    transition: 0.3s ease-in-out;
+}
+
+.btn{
+    flex-direction:column;
+    background-color: var(--link-color);
+    color: var(--background-color);
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    padding: 0.3rem 0.3rem;
+    margin: 1rem;
+}
+
+.btn:hover{
+box-shadow: 0 0 3rem var(--link-color);
+transition: 0.3s ease-in-out;
+transform: scale(1.1)translateY(-0.1rem);
+}
+
+.expertise-heading {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.expertise-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 1.2rem;
+}
+
+.expertise-img img{
+    width: 32vw; /*32% of viewport width reponsive!*/
+    border-radius: 50rem;
+    box-shadow: 0 0 2rem var(--link-color);
+}
+
+.expertise-list ul{
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.expertise-list ul li i{
+    color: var(--link-color);
+    padding: 0.3rem;
+}
+
+.expertise-list ul li{
+    border: solid 0.5rem var(--link-color);
+    list-style-type: none;
+    margin: 1rem;
+    border-radius: 2rem;
+    padding: 0.3rem;
+}
+
+.expertise-list ul li:hover{
+    border: solid 0.5rem var(--happy-color);
+    box-shadow: 0 0 2rem var(--happy-color);
+}
+
+
+.work-heading {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.work-content{
+    padding: 1.2rem;
+    display: flex;
+}
+
+.work-box{
+    justify-content: center;
+    align-items: center;
+}
+
+.work-info{
+    background : linear-gradient(360deg, rgb(17, 87, 201, 0.3), rgb(80, 128, 205, 0.2), rgb(17, 87, 201, 0.3));    
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    border: solid 0.5rem var(--link-color);
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-info:hover{
+    border: solid 0.5rem var(--happy-color);
+    box-shadow: 0 0 2rem var(--happy-color);
+}
+
+.work-info h4{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.work-info p{
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+#contact{
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-heading {
+    font-size: 2rem;
+    text-align: center;
+}
+
+#contact form{
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.input-elements{
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    width: 100%;
+    border: 0.25rem solid var(--link-color);
+}
+
+.input-elements:focus{
+    border-color: var(--happy-color);
+    outline: none;
+}
+
+.text-area{
+    font-size: 1.3rem;
+    padding: 1rem;
+    min-height: 25vh;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    width: 100%;
+    border: 0.25rem solid var(--link-color);
+}
+
+.text-area:focus{
+    border-color: var(--happy-color);
+    outline: none;
+}
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--link-color);
+    padding: 1rem;
+}
+
+.footer-social a{   
+    color: var(--background-color);
+    font-size: large;
+    margin: 1.5rem;
+    padding: 0.4rem;
+    border-radius: 2rem;
+}
+
+.footer-social a:hover{
+    /* box-shadow: 0 0 2rem var(--link-color); */
+    box-shadow: 0 0 1rem var(--background-color);
+}   
+
+.footer-copy{
+    color: var(--background-color);
+    font-size: large;
+}
+
+
+@media(max-width: 1024px){
+
+    header {
+        padding: 0.5rem 1rem; /* 0 is y-axis, x-axis is 2rem */
+    }
+
+    #menu-icon{
+        display: block;
+    }
+
+    header .nav {
+        top: 4rem;
+        width: 100%;
+        text-align: center;
+        background-color:rgba(28, 27, 27, 0.85);
+        display: none;
+        position: fixed;
+    }
+
+    header .nav.active { /*when js activates this active class the .nav will display */
+        display: block;
+    }
+
+    header .nav a{
+        color: var(--background-color);
+        display: block; /*displays vertically*/
+    }
+
+    #hero{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+        
+    .hero-img{
+        flex-direction: column;
+        padding: 0.5rem;
+        padding-top: 2rem;
+    }
+
+    .hero-img img{
+        width: 50vw;
+    }
+
+    .expertise-img img{
+        width: 40vw;
+    }
+
+    #a-contact-button{
+        display: block;
+        background: linear-gradient(90deg, var(--link-color), rgb(80, 128, 205));    
+    }
+
+    .contact-button{
+        display: none;
+    }
+
+    .work-content{
+        flex-direction: column;
+    }
+
+    .expertise-content{
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .work-info{
+        height: 25vh; /* need to adjust for more than 3 works */ 
+    }
+
+}
+
+@media(max-width: 600px){
+
+    .hero-content #name{
+        font-size: 5rem;
+    }
+
+    .hero-content h1{
+        font-size: 1.5rem;
+    }
+    
+    .hero-content h3{
+        font-size: 1.5rem;
+    }
+    
+    .hero-content p{
+        padding-top: 1rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+    
+    .hero-img img{
+        width: 60vw;
+    }
+
+    .expertise-img img{
+        width: 55vw;
+    }
+
+    .expertise-list ul{
+        font-size: 1rem;
+    }
+
+    .work-info{
+        height: max-content;
+    }
+
+    #contact form{
+        width: 75vw;
+    }
+
+    .input-elements{
+        font-size: 1rem;
+    }
+    
+    .text-area{
+        font-size: 1rem;
+    }
+
+    .footer-social a{   
+        font-size: medium;
+        margin: 0.5rem;
+        padding: 0.2rem;
+        border-radius: 0.5rem;
+    }
+        
+    .footer-copy{
+        font-size: medium;
+    }
+
+}
